@@ -15,7 +15,7 @@ import MessageRoute from './Routes/MessageRoute.js';
 const app = express();
 
 // to serve images for public
-app.use(express.static('public'));
+app.use(express.static('Public'));
 app.use('images', express.static('Images'));
 
 //Middleware
