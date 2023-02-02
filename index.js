@@ -15,8 +15,8 @@ import MessageRoute from './Routes/MessageRoute.js';
 const app = express();
 
 // to serve images for public
-app.use(express.static('public'));
-app.use('/images', express.static('images'));
+app.use(express.static('Public'));
+app.use('/images', express.static('./Public/Images'));
 
 app.use(cors());
 app.options('*', cors())
