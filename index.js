@@ -16,7 +16,7 @@ const app = express();
 
 // to serve images for public
 app.use(express.static('Public'));
-app.use('/images', express.static('Images'));
+app.use('/Images', express.static('images'));
 
 app.options('*', cors())
 
