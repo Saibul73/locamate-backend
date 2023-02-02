@@ -15,16 +15,16 @@ import MessageRoute from './Routes/MessageRoute.js';
 const app = express();
 
 // to serve images for public
-app.use(express.static('Public'));
-app.use('/Images', express.static('Images'));
+app.use(express.static('public'));
+app.use('/images', express.static('images'));
 
+app.use(cors());
 app.options('*', cors())
 
-//Middleware
 app.use(bodyParser.json({ limit: '30mb', extended: true }));
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
-app.use(cors());
 dotenv.config();
+//Middleware
 
 mongoose
   .connect(process.env.MONGO_DB, { useNewUrlParser: true, useUnifiedTopology: true })
