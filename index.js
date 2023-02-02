@@ -18,6 +18,8 @@ const app = express();
 app.use(express.static('Public'));
 app.use('/images', express.static('Images'));
 
+app.options('*', cors())
+
 //Middleware
 app.use(bodyParser.json({ limit: '30mb', extended: true }));
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
